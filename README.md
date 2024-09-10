@@ -3,6 +3,7 @@
 ## Overview
 
 The `IEEE_adder` module performs addition or subtraction on two 32-bit IEEE 754 floating-point numbers. It accurately handles various exponent values, aligns significands (fractional parts), and ensures compliance with IEEE 754 standards.
+![Single-Precision-IEEE-754-Floating-Point-Standard](https://github.com/user-attachments/assets/06f8e3b3-8897-4724-b6a9-624028836b56)
 
 ## Operation Steps
 
@@ -37,6 +38,6 @@ The `IEEE_adder` module performs addition or subtraction on two 32-bit IEEE 754 
 
 - **result**: 32-bit IEEE 754 floating-point result of the operation.
 
-## Details
+The block diagram used to build this IEEE 754 adder/subtractor module is shown below.
 
-This module is designed to ensure accurate floating-point arithmetic by properly handling exponent alignment, performing arithmetic operations, and adjusting the result according to IEEE 754 standards.
+![WhatsApp Image 2024-09-10 at 22 29 14](https://github.com/user-attachments/assets/c3402e20-efed-458a-b152-3371802d7c56)
