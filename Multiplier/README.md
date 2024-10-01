@@ -1,4 +1,4 @@
-# Booth Algorithm for Twos Complement Multiplication
+# Algorithms for Multiplication
 
 ![24x24-Vedic-Multiplier-Block-Implementation](https://github.com/user-attachments/assets/1eae54ec-1034-43c3-b8d7-6ac148ce89ce)
 
