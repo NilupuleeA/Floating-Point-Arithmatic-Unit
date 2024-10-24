@@ -24,6 +24,7 @@ module fp_add_sub(
     input logic clk, rstn,
     input logic [31:0] num1,
     input logic [31:0] num2,
+    input logic [1:0] op,
     output logic [31:0] S 
 ); 
     logic sign1, sign2, sign;
@@ -42,22 +43,22 @@ module fp_add_sub(
     assign expo1 = num1[30:23];
     assign expo2 = num2[30:23];
 
-    exponet_diff comp(
-        .clk(clk),
-        .frac1(frac1),
-        .frac2(frac2),
-        .expo1(expo1),
-        .expo2(expo2),
-        .exp_diff(exp_diff),
-        .sel(sel)
-    );
+    // exponet_diff comp(
+    //     .clk(clk),
+    //     .frac1(frac1),
+    //     .frac2(frac2),
+    //     .expo1(expo1),
+    //     .expo2(expo2),
+    //     .exp_diff(exp_diff),
+    //     .sel(sel)
+    // );
 
     fraction fac (
         .clk(clk), 
         .rstn(rstn),
         .frac1(frac1),
         .frac2(frac2),
-        .exp_diff(exp_diff),
+        //.exp_diff(exp_diff),
         .sel(sel),
         .expo1(expo1), 
         .expo2(expo2),
@@ -83,7 +84,8 @@ module fp_add_sub(
         .sel(sel),
         .sign1(sign1), 
         .sign2(sign2),
-        .sel2(sel2), 
+        .sel2(sel2),
+        .op(op), 
         .sign(sign)
     );
 

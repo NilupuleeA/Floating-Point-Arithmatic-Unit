@@ -3,15 +3,15 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 30.09.2024 21:45:29
+// Create Date: 05.10.2024 04:25:58
 // Design Name: 
-// Module Name: multiplier_24bit
+// Module Name: multiplier_12bit
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description: 24-bit multiplier using partial product accumulation.
+// Description: 
 // 
-// Dependencies: unsigned_mul module
+// Dependencies: 
 // 
 // Revision:
 // Revision 0.01 - File Created
@@ -19,11 +19,12 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-// module multiplier_24bit #(
-//     parameter N = 24
+
+// module multiplier_12bit #(
+//     parameter N = 12
 // )(
-//     input logic clk,
-//     input logic rstn, 
+//     // input logic clk,
+//     // input logic rstn, 
 //     input logic [N-1:0] M,
 //     input logic [N-1:0] Q,
 //     output logic [2*N-1:0] R
@@ -31,7 +32,7 @@
 
 //     logic [4*N-1:0] R_temp; 
 
-//     multiplier_12bit mul_1 (
+//     multiplier_6bit mul_1 (
 //         .M(M[0 +: N/2]),       
 //         .Q(Q[0 +: N/2]),       
 //         .clk(clk),            
@@ -39,7 +40,7 @@
 //         .R(R_temp[0 +: N])  
 //     ); 
 
-//     multiplier_12bit mul_2 (
+//     multiplier_6bit mul_2 (
 //         .M(M[0 +: N/2]),       
 //         .Q(Q[N/2 +: N/2]),      
 //         .clk(clk),            
@@ -47,7 +48,7 @@
 //         .R(R_temp[N +: N])  
 //     ); 
 
-//     multiplier_12bit mul_3 (
+//     multiplier_6bit mul_3 (
 //         .M(M[N/2 +: N/2]),     
 //         .Q(Q[0 +: N/2]),       
 //         .clk(clk),            
@@ -55,7 +56,7 @@
 //         .R(R_temp[2*N +: N])  
 //     ); 
 
-//     multiplier_12bit mul_4 (
+//     multiplier_6bit mul_4 (
 //         .M(M[N/2 +: N/2]),      
 //         .Q(Q[N/2 +: N/2]),      
 //         .clk(clk),           
@@ -71,8 +72,8 @@
 
 // endmodule
 
-module multiplier_24bit#(
-    parameter N = 24
+module multiplier_12bit#(
+    parameter N = 12
 )(
     input logic [N-1:0] M,
     input logic [N-1:0] Q,
@@ -81,25 +82,25 @@ module multiplier_24bit#(
 
     logic [4*N-1:0] R_temp; 
 
-    multiplier_12bit mul_1 (
+    multiplier_6bit mul_1 (
         .M(M[0 +: N/2]),       
         .Q(Q[0 +: N/2]),               
         .R(R_temp[0 +: N])  
     ); 
 
-    multiplier_12bit mul_2 (
+    multiplier_6bit mul_2 (
         .M(M[0 +: N/2]),       
         .Q(Q[N/2 +: N/2]),           
         .R(R_temp[N +: N])  
     ); 
 
-    multiplier_12bit mul_3 (
+    multiplier_6bit mul_3 (
         .M(M[N/2 +: N/2]),     
         .Q(Q[0 +: N/2]),               
         .R(R_temp[2*N +: N])  
     ); 
 
-    multiplier_12bit mul_4 (
+    multiplier_6bit mul_4 (
         .M(M[N/2 +: N/2]),      
         .Q(Q[N/2 +: N/2]),               
         .R(R_temp[3*N +: N])  
@@ -111,5 +112,4 @@ module multiplier_24bit#(
         R[2*N-1:N] = R[2*N-1:N] + R_temp[3*N +: N];
     end
 endmodule
-
 

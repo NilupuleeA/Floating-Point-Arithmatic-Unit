@@ -32,14 +32,15 @@ module fraction_tb();
     logic [22:0] frac1;
     logic [22:0] frac2;
     logic [23:0] nonShifted_val, Shifted_val;
-    logic [7:0] exp_diff;
+    //logic [7:0] exp_diff;
     logic sel;
     logic [7:0] exponent_temp;
 
-    exponet_diff step1(.*);
+    //exponet_diff step1(.*);
     fraction dut(.*);
 
     initial begin
+        rstn <= 1;
         expo1 <= 8'd5;
         expo2 <= 8'd11;
         frac1 <= 23'd5;

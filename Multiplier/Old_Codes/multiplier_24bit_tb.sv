@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 16.09.2024 18:06:58
+// Create Date: 01.10.2024 11:51:32
 // Design Name: 
-// Module Name: fp_mul_tb
+// Module Name: multiplier_24bit_tb
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,48 +20,50 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module fp_mul_tb();
+module multiplier_24bit_tb();
     localparam CLK_PERIOD = 10;
-    logic clk, rstn;
-    
+    logic clk, rstn = 0;
     initial begin
         clk = 0;
-        forever #(CLK_PERIOD/2) clk = ~clk; 
+        forever #(CLK_PERIOD/2) clk <= ~clk;
     end
 
-    logic [31:0] num1;
-    logic [31:0] num2;
-    logic [31:0] S;
+    localparam N = 24;
 
-    fp_mul dut (.*);
+    logic [N-1:0] M;
+    logic [N-1:0] Q;
+    logic [2*N-1:0] R;
+
+    //exponet_diff step1(.*);
+    multiplier_24bit dut(.*);
 
     initial begin
+        M <= 24'd3000;
+        Q <= 24'd71;
         rstn <= 0;
-        num1 <= 32'b00111110100111101011100001010010;
-        num2 <= 32'b00111111100011110101110000101001;
+
         @(posedge clk);
         rstn <=1;
         
-        repeat (10) 
-        #15 check_output(S, 32'b00111110101100011100010000110011);       
         
         repeat (10) 
-        @(posedge clk);
-        num1 <= 32'b00111111100110101110000101001000;
-        num2 <= 32'b00111111100000010100011110101110;
+        #15 check_output(R, 12'd21);       
+        //01000011000101101100011100010001
 
-        repeat (10) 
-        #15 check_output(S, 32'b00111111100111000110110111000110);
+//        @(posedge clk);
+//        M <= 24'b11000001001000011100001010001111;
 
+//        repeat (10) 
+//        #15 check_output(R, 24'b11000001001100111000010100011110);
     end
 
-     task check_output;
-         input [31:0] actual;
-         input [31:0] expected;
+    task check_output;
+         input [11:0] actual;
+         input [11:0] expected;
          if (actual !== expected) begin
              $display("Test Failed: Expected %h, but got %h", expected, actual);
          end else begin
              $display("Test Passed: Output %h matches expected %h", actual, expected);
          end
-     endtask
+    endtask
 endmodule

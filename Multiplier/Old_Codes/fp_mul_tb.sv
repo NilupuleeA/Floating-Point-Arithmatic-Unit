@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 15.07.2024 19:19:34
+// Create Date: 16.09.2024 18:06:58
 // Design Name: 
-// Module Name: fp_add_sub_tb
+// Module Name: fp_mul_tb
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -19,7 +19,8 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module fp_add_sub_tb();
+
+module fp_mul_tb();
     localparam CLK_PERIOD = 10;
     logic clk, rstn;
     
@@ -31,15 +32,13 @@ module fp_add_sub_tb();
     logic [31:0] num1;
     logic [31:0] num2;
     logic [31:0] S;
-    logic op; 
 
-    fp_add_sub dut (.*);
+    fp_mul dut (.*);
 
     initial begin
         rstn = 0;
         num1 = 0;
         num2 = 0;
-        op = 0;
 
         #20; 
         rstn = 1;
@@ -61,20 +60,19 @@ module fp_add_sub_tb();
         // #15 check_output(S, 32'b01000010110010100011001100110011);
 
         @(posedge clk);
-        num1 <= 32'b01000001001000011100001010001111;
-        num2 <= 32'b00111111100011100001010001111011;
-        op <= 1;
+        num1 <= 32'b00111111100011100001010001111011;
+        num2 <= 32'b01000001001001010100011110101110;
         
         repeat (10) 
-        #15 check_output(S, 32'b01000001000100000000000000000000);       
+        #15 check_output(S, 32'b01000001001101110111010111110111);       
         //01000011000101101100011100010001
 
-        @(posedge clk);
-        num1 <= 32'b11000001001000011100001010001111;
-        num2 <= 32'b00111111100011100001010001111011;
-        op <= 1;
-        repeat (10) 
-        #15 check_output(S, 32'b11000001001100111000010100011110);
+        // @(posedge clk);
+        // num1 <= 32'b11000001001000011100001010001111;
+        // num2 <= 32'b00111111100011100001010001111011;
+
+        // repeat (10) 
+        // #15 check_output(S, 32'b11000001001100111000010100011110);
 
     end
 

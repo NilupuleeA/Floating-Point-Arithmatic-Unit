@@ -28,7 +28,7 @@ module unsigned_mul_tb();
         forever #(CLK_PERIOD/2) clk <= ~clk;
     end
 
-    localparam N = 12;
+    localparam N = 3;
 
     logic [N-1:0] M;
     logic [N-1:0] Q;
@@ -38,8 +38,8 @@ module unsigned_mul_tb();
     unsigned_mul dut(.*);
 
     initial begin
-        M <= 12'd301;
-        Q <= 12'd110;
+        M <= 24'd45646;
+        Q <= 24'd367487;
         rstn <= 0;
 
         @(posedge clk);
@@ -47,14 +47,15 @@ module unsigned_mul_tb();
         
         
         repeat (10) 
-        #15 check_output(R, 12'd21);       
+        #15 check_output(R, 24'd21);       
         //01000011000101101100011100010001
 
-//        @(posedge clk);
-//        M <= 24'b11000001001000011100001010001111;
+       @(posedge clk);
+       M <= 3'd1147;
+       Q <= 3'd4;
 
-//        repeat (10) 
-//        #15 check_output(R, 24'b11000001001100111000010100011110);
+       repeat (10) 
+       #15 check_output(R, 3'b11000001001100111000010100011110);
     end
 
     task check_output;

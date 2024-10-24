@@ -38,8 +38,8 @@ module multiplier_24bit_tb();
     multiplier_24bit dut(.*);
 
     initial begin
-        M <= 24'd3000;
-        Q <= 24'd71;
+        M <= 24'd80000;
+        Q <= 24'd8000;
         rstn <= 0;
 
         @(posedge clk);
