@@ -1,0 +1,173 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/nilupulee/Documents/FPU/Floating-Point-Arithmatic-Unit/fpu
+vaddsub_24bit
+Z2 2addsub_24bit.sv|fpu_add_sub.sv|fpu_add_sub_tb.sv|fraction.sv|full_adder.sv|sub_8bit.sv
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z4 !s110 1734157429
+!i10b 1
+!s100 CnHQYZ7X1i5kO<zjcHRoB0
+I`9hnUdI36RGJeEVUo=b<V1
+S1
+R1
+w1734157077
+8addsub_24bit.sv
+Faddsub_24bit.sv
+!i122 0
+L0 3 26
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z7 !s108 1734157429.000000
+Z8 !s107 sub_8bit.sv|full_adder.sv|fraction.sv|fpu_add_sub_tb.sv|fpu_add_sub.sv|addsub_24bit.sv|
+Z9 !s90 -64|-incr|-mfcu|-sv|addsub_24bit.sv|fpu_add_sub.sv|fpu_add_sub_tb.sv|fraction.sv|full_adder.sv|sub_8bit.sv|
+!i113 0
+Z10 o-64 -mfcu -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0
+vfpu_add_sub
+R2
+R3
+R4
+!i10b 1
+!s100 _<7nTkQCOS<kD_]IRj8YN1
+I[MUE?7=]fczgUjb1zN0Se3
+S1
+R1
+w1734157298
+8fpu_add_sub.sv
+Ffpu_add_sub.sv
+!i122 0
+L0 3 111
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vfpu_add_sub_tb
+R2
+R3
+R4
+!i10b 1
+!s100 9^=UbEf5oT=To?>I<=][E1
+ILWPf7@>49LTR`c?ao@YKf2
+S1
+R1
+w1734156249
+8fpu_add_sub_tb.sv
+Ffpu_add_sub_tb.sv
+!i122 0
+L0 3 70
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vfraction
+R2
+R3
+R4
+!i10b 1
+!s100 C?>o7dH6Yd?9QHY2HAo;B2
+I?ZGJI7aIb>>X540B9^P:o2
+S1
+R1
+w1734157355
+8fraction.sv
+Ffraction.sv
+!i122 0
+L0 3 36
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vfull_adder
+R2
+R3
+R4
+!i10b 1
+!s100 Y4CiS9T8T`OCNY[iD@kR=1
+IY]6=ZCT>T^L=zX87zZ>W]3
+S1
+R1
+w1734157381
+8full_adder.sv
+Ffull_adder.sv
+!i122 0
+L0 3 20
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vsub_8bit
+R2
+R3
+R4
+!i10b 1
+!s100 QJ6dIE0KQ4a79CeXZ=[:12
+IJ>5G@e=OAZ:lODbUBOA2j1
+S1
+R1
+w1734157396
+8sub_8bit.sv
+Fsub_8bit.sv
+!i122 0
+L0 3 27
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+Ttestbench_opt
+R4
+V2ONNBZiFBnK2T0R<1hzm;2
+04 14 4 work fpu_add_sub_tb fast 0
+R0
+!s12b OEM100
+!s124 OEM10U37 
+o+acc=p
+R11
+ntestbench_opt
+OL;O;2023.3;77

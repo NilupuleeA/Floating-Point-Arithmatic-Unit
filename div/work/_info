@@ -1,0 +1,198 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/nilupulee/Documents/FPU/Floating-Point-Arithmatic-Unit/fpu/div
+vadd_8bit
+Z2 2add_8bit.sv|fp_div.sv|fp_div_tb.sv|full_adder.sv|sub_8bit.sv|unsigned_div.sv|unsigned_div_tb.sv
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z4 !s110 1734183413
+!i10b 1
+!s100 HOGQAO2Rad7[Gk@m8:GDz0
+ITV>=3R>;IBa>^A8TzOmbl1
+S1
+R1
+w1733727282
+8add_8bit.sv
+Fadd_8bit.sv
+!i122 0
+Z5 L0 23 27
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z8 !s108 1734183413.000000
+Z9 !s107 unsigned_div_tb.sv|unsigned_div.sv|sub_8bit.sv|full_adder.sv|fp_div_tb.sv|fp_div.sv|add_8bit.sv|
+Z10 !s90 -64|-incr|-mfcu|-sv|add_8bit.sv|fp_div.sv|fp_div_tb.sv|full_adder.sv|sub_8bit.sv|unsigned_div.sv|unsigned_div_tb.sv|
+!i113 0
+Z11 o-64 -mfcu -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 tCvgOpt 0
+vfp_div
+R2
+R3
+R4
+!i10b 1
+!s100 E5HVa12m6f2>_o7Ti7OhN3
+Ia<^fc[3`fG`JD[[TmhUYi3
+S1
+R1
+Z13 w1733294717
+8fp_div.sv
+Ffp_div.sv
+!i122 0
+L0 23 58
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+vfp_div_tb
+R2
+R3
+R4
+!i10b 1
+!s100 gV6F:<zCYiXN<cUT5Be803
+I9;I5ICiUR8GDNZe?]2=SW1
+S1
+R1
+w1734183394
+8fp_div_tb.sv
+Ffp_div_tb.sv
+!i122 0
+L0 23 47
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+vfull_adder
+R2
+R3
+R4
+!i10b 1
+!s100 h>LI9DRzKUnBLb88Vc53]2
+I8nPOeM5PeVQJii?JO]<:32
+S1
+R1
+R13
+8full_adder.sv
+Ffull_adder.sv
+!i122 0
+L0 23 20
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+vsub_8bit
+R2
+R3
+R4
+!i10b 1
+!s100 YAgBB`2dH_<MjP4z=ZV3E0
+IUEeMlh`<@aFQUN5Qo^a1_0
+S1
+R1
+w1734105587
+8sub_8bit.sv
+Fsub_8bit.sv
+!i122 0
+R5
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+Ttestbench_opt
+R4
+VJVYAlienoEWlRVhhJH9iP3
+04 9 4 work fp_div_tb fast 0
+R0
+!s12b OEM100
+!s124 OEM10U21 
+o+acc=p
+R12
+ntestbench_opt
+OL;O;2023.3;77
+vunsigned_div
+R2
+R3
+R4
+!i10b 1
+!s100 zXNX<jcgX3MBlS^4B>VSc2
+I4M<SfJEebcNQ2I0478nk41
+S1
+R1
+w1734183223
+8unsigned_div.sv
+Funsigned_div.sv
+!i122 0
+L0 3 71
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+vunsigned_div_tb
+R2
+R3
+R4
+!i10b 1
+!s100 nG_][iznzfnCigC9S1a0m3
+IJg5>=gNM4X[I@[_H>IfL_1
+S1
+R1
+R13
+8unsigned_div_tb.sv
+Funsigned_div_tb.sv
+!i122 0
+L0 23 48
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
