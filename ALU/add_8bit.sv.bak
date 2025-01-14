@@ -34,11 +34,9 @@ module add_8bit #(
 
     assign C[0] = c_in;
     //assign S[N] = c_out;
-	 
-	 genvar i;
 
     generate
-        for (i = 0; i < N; ++i) begin: add
+        for (genvar i = 0; i < N; ++i) begin: add
             full_adder fa(
                 .a(A[i]),
                 .b(B[i]^c_in),

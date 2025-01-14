@@ -8,17 +8,8 @@
 
     logic [31:0] number1, number2, result;
 
- //   assign number1 = 32'b00111111100011100001010001111011;
- //   assign number2 = 32'b00111111100000010100011110101110;
- 
-//	assign number1 = 32'h41BA6666;
-//	assign number2 = 32'h40066666;
-	
-	assign number1 = 32'h4164CCCD;  //14.3
-	assign number2 = 32'h402A0C4A;  //2.657
-	
-	//assign number1 = 32'hC134CCCD;  //14.3
-	//assign number2 = 32'h404CCCCD;  //2.657
+    assign number1 = 31'b00111111100011100001010001111011;
+    assign number2 = 31'b00111111100000010100011110101110;
 
     fp_alu alu(
         .clk(clk), 

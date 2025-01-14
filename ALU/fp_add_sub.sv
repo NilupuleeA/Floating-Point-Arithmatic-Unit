@@ -21,6 +21,7 @@ module fp_add_sub(
     logic [23:0] temp_sum;
     logic c_out;
     logic [4:0] count;
+    logic [4:0] temp_count;
 
     assign val1 = {1'b1, frac1};  
     assign val2 = {1'b1, frac2};  
@@ -53,25 +54,24 @@ module fp_add_sub(
         .S(sum)          
     );
 
-    always_ff @(posedge clk or negedge rstn) begin
-        if (!rstn) begin
-            fraction <= 23'b0;
-            count <= '0;
-            exponent <= '0;
-            temp_sum <= '0;
+    always_comb begin
+        fraction = 23'b0;
+        count = 5'b0;
+        exponent = 8'b0;
+        temp_sum = sum;
+        temp_count = 5'b0;
+
+        if (!sel2 && c_out) begin
+            fraction = sum >> 1;
+            exponent = exponent_temp + 1;
         end else begin
-            if (!sel2 && c_out) begin
-                fraction <= sum >> 1;
-                exponent <= exponent_temp + 1;
-            end else begin      
-                temp_sum <= sum;
-                while (!sum[23] && count < 24) begin
-                    temp_sum <= temp_sum << 1;
-                    count <= count + 1;
-                end
-                fraction <= temp_sum;  
-                exponent <= exponent_temp - count;               
+            while (!temp_sum[23] && temp_count < 24) begin
+                temp_sum = temp_sum << 1;
+                temp_count = temp_count + 1;
             end
+            count = temp_count;
+            fraction = temp_sum;
+            exponent = exponent_temp - temp_count;
         end
     end
     

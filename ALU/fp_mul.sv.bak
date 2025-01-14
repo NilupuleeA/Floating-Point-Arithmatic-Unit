@@ -47,7 +47,7 @@ module fp_mul(
             fraction = result[45:23] + result[22];
             exponent = exp_temp;
         end else begin
-            fraction = result[46:24] + result[23];
+            fraction = result[46:22] + result[21];
             exponent = exp_temp+1;
         end
     end
